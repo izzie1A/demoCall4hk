@@ -2,3 +2,63 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root {
+    --blue: #389cff;
+    --deepBlue: #3f51b5;
+    --red: #fc4753;
+    --yellow: #f7bc4e;
+    --green: #88b25b;
+    --white: #ffffff;
+    --lightBlue: #8da9c4;
+    --lightGray: #cccccc;
+    --dark: #4d4d4d;
+
+    --seaSick: #e9e8e2;
+    --sickSea: var(--dark);
+
+    --main: #FFE500;
+    --mainText: var(--dark);
+    --sub: #bebebe;
+    --subText: var(--dark);
+
+    --bg: var(--white);
+    --histarri: var(--yellow);
+
+    --title: 12px;
+    --context: 12px;
+    --keyvalue: 9px;
+
+    --screenS: 700px;
+    --screenM: 1200px;
+    --screenL: 2000px;
+
+    --imgS: 12px;
+    --imgM: 120px;
+    --imgL: 240px;
+
+    --boxShadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    --boxShadow2: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+@media only screen and (min-width: 700px) {
+    :root {
+        --title: 24px;
+        --context: 15px;
+        --keyValue: 12px;
+
+        --imgS: 12px;
+        --imgM: 120px;
+        --imgL: 240px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    :root {
+        --title: 28px;
+        --context: 17px;
+        --keyvalue: 15px;
+    }
+}

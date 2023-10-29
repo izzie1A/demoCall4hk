@@ -1,0 +1,42 @@
+<div>
+    <div class="navBar itemCardPadding">
+        <div class="navbar">
+            <img src="{{navIcon}}">
+            <b>5DN0L</b>
+            <!-- <img class="navBarIcon" src="{{iconImgURL}}"> -->
+        </div>
+        <button class="navbarPopHamburgeIcon "
+            (click)="expanNavbar(navbarDiv,NavTriggerArea);navBarClick(hamburgerIconDiv);" (click)="0">
+            <div class="container" #hamburgerIconDiv>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+
+        <div class="navBarItemContainer ">
+            <button *ngFor="let x of itemArray" class="navBarButton" routerLink="/{{x.url.toString()}}">
+                <a class="navBarButtonText">
+                    {{x.displayName}}
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <div class="hideNavbbar" #navbarDiv>
+        <button *ngFor="let x of itemArray" class="navBarButton" routerLink="/{{x.url.toString()}}"
+            (click)="expanNavbar(navbarDiv,NavTriggerArea);navBarClick(hamburgerIconDiv)"
+            [style.color]="'var(--subText)'">
+            <a class="navBarButtonText">
+                {{x.displayName}}
+            </a>
+        </button>
+    </div>
+
+    <div (click)="expanNavbar(navbarDiv,NavTriggerArea)" class="NavTriggerArea " #NavTriggerArea>
+
+    </div>
+
+    <div (click)="expanNavbar(navbarDiv,NavTriggerArea);navBarClick(hamburgerIconDiv)" class="NavTriggerArea "
+        #NavTriggerArea></div>
+</div>

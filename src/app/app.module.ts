@@ -10,10 +10,22 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { HomePageComponent } from './slides/home-page/home-page.component';
+import { CampaignListComponent } from './slides/campaign-list/campaign-list.component';
+import { EventListComponent } from './slides/event-list/event-list.component';
+import { ItemCardComponent } from './components/item-card/item-card.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    CampaignListComponent,
+    EventListComponent,
+    ItemCardComponent,
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
