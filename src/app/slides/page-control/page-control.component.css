@@ -1,0 +1,16 @@
+.x {
+    min-height: 100vh;
+}
+
+.pageControlGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 2%;
+}
+
+.pageControlMenuList {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 2%;
+}

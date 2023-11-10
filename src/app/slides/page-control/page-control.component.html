@@ -1,0 +1,17 @@
+<div class="x">
+    <div class="itemCard">
+        <button>asds</button>
+        <button>asds</button>
+        <button>asds</button>
+        <div class="pageControlGrid ">
+            <div class="pageControlMenuList">
+                <div class="" *ngFor="let x of campainList" (click)="get(x)">
+                    {{x.name}}
+                </div>
+            </div>
+            <div>
+                <app-item-card [content]="docHolder"></app-item-card>
+            </div>
+        </div>
+    </div>
+</div>

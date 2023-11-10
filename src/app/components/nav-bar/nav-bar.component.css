@@ -139,18 +139,19 @@
  
  .hideNavbbar {
    display: flex;
+   height: 0px;
+   /* display: none; */
    flex-direction: column;
    /* align-items: flex-start; */
    width: 100%;
    overflow: hidden;
-   height: auto;
    position: absolute;
    z-index: 2;
    background-color: var(--seaSick);
    transition-duration: 0.7s;
    opacity: 0;
    box-shadow: var(--boxShadow);
-   padding: 2%;
+   /* padding: 2%; */
  }
  
  

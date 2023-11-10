@@ -1,134 +1,48 @@
-.homepageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5%;
-    padding-left: 15%;
-    padding-right: 15%;
-}
-
-.homeImg {
-    width: 100%;
-}
-
-.homeImgFrame {}
-
-.homeTextHighLight {
-    box-shadow: 0px 2px 0px 0px var(--main);
-}
-
-.homepageContainerText1 {
-    display: flex;
-    flex-direction: column;
+.itemCard {
     position: relative;
-    width: 100%;
-    padding: 2%;
-}
-.homepageContainerText2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 2%;
+    overflow: hidden;
+
+    border-radius: 1vmin;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: var(--seaSick);
+    color: var(--dark);
+
+    animation-duration: 4s;
+    transition: 0.25s, width 0s;
+    /*  */
+    /* max-height: var(--imgL); */
 }
 
-.homepageTakeAction {
-    height: 4ch;
-}
-.homepageTakeActionBtn {
-    /* width: 100%; */
-    height: 4ch;
-    /* margin-left: 2%;
-    margin-right: 2%; */
-    margin-top: 2%;
-    padding: 2%;
-    box-shadow: none;
-    background-color: var(--main);
-    color: var(--mainText);
-}
-.howItWorkContainer{
+.itemCardHeader {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap:1ch;
-}
-.howItWorkItem{
-    display: flex;
     align-items: center;
-}
-.howItWorkText{
-    display: flex;
-    align-items: center;
-}
-
-.howItWorkDot{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2ch;
-    height: 2ch;
-    background-color: var(--main);
-    border-radius: 1000px;
-    padding: 2%;
-    margin: 2%;
-}
-
-
-.yourMemberItem{
-   box-shadow: 0px 0.125pc 0px var(--dark);
-}
-.yourMemberItemInfo{
-    /* display: flex; */
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-.yourMemberItemImageFrame{
-    /* max-width: 10vw; */
-    max-width: 10vw;
-    margin: 5%;
-     
-}
-.yourMemberItemImage{
-    width: 100%;
-}
-
-.yourMemberItemAction{
-    display: flex;
-    align-items:flex-end;
-    flex-direction: column;
-}
-.yourMemberBtn{
-    display: flex;
-    align-items: center;
-    background-color: var(--main);
-    color: var(--mainText);
-    padding: 2.5%;
-    width: 20%;
-}
-.yourMemberBtn:focus-visible {
-  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
-  transition: box-shadow .2s;
-}
-.yourMemberBtn:active {
-  background-color: #F7F7F7;
-  border-color: #000000;
-  transform: scale(.96);
-}
-.yourMemberBtn:disabled {
-  border-color: #DDDDDD;
-  color: #DDDDDD;
-  cursor: not-allowed;
-  opacity: 1;
-}
-
-.forward{}
-
-.forwardTitle{
-    display: flex;
     justify-content: space-between;
+    background-color: var(--main);
+    color: var(--mainText);
+    padding-left: 2%;
 }
 
-.forwardTextArea{
-    background-color: var(--light-gray);
-    background-color: #D9D9D9;
+.itemCardBody {
+    /* display: flex; */
+    padding: 2%;
+    min-height: var(--imgM);
+}
+
+.itemCardGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    /* height: 100%; */
+}
+.itemCardImageFrame{
+    width: var(--imgM);
+    height: var(--imgM);
+    overflow: hidden;
+    display: flex;
+
+}
+.itemCardImage{
     width: 100%;
+    height: auto;
 }

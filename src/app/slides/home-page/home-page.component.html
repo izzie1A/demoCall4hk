@@ -1,12 +1,156 @@
-<div class="homepageContainer">
+<div class="homepageContainer" >
     <div class="homeImgFrame">
         <img class="homeImg" src="{{posterimg1}}">
     </div>
 
-    <app-item-card></app-item-card>
+    <div class="" [style]="'width:100%;'" >
+        <mat-stepper [linear]="isLinear" #stepper>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <div>
+                    <diV class="homepageContainerText1">
+                        <div>
+                            <b class="homeTextHighLight">一人一信</b>
+                        </div>
+                        <h1>
+                            <b>反對邀請香港警察出席任何國際活動</b>
+                        </h1>
+                    </diV>
+                    <diV class="homepageContainerText1">
+                        <input class="homepageTakeAction" type="text" placeholder="Enter your postal code">
+                        <button class="homepageTakeActionBtn" matStepperNext>
+                            <p><b>Take action</b></p>
+                        </button>
+                    </diV>
+
+                    <div>
+                        <h1>
+                            <b>How it works</b>
+                        </h1>
+                        <div class="howItWorkContainer">
+                            <div class="howItWorkItem">
+                                <div class="howItWorkDot">
+                                    <b>
+                                        1
+                                    </b>
+                                </div>
+                                <h2 class="howItWorkText">Enter your postal code</h2>
+                            </div>
+                            <div class="howItWorkItem">
+                                <div class="howItWorkDot">
+                                    <b>
+                                        2
+                                    </b>
+                                </div>
+                                <h2 class="howItWorkText">Find your Member of Parliament</h2>
+                            </div>
+                            <div class="howItWorkItem">
+                                <div class="howItWorkDot">
+                                    <b>
+                                        3
+                                    </b>
+                                </div>
+                                <h2 class="howItWorkText">Email them with our templates</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-step>
+
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Name</ng-template>
+
+                    <h1><b>YOUR MEMBER OF PARLIAMENT</b> </h1>
+
+                    <div class="yourMemberItem ">
+                        <div class="yourMemberItemInfo">
+                            <div class="yourMemberItemImageFrame">
+                                <img src="{{temimg}}" class="yourMemberItemImage">
+                            </div>
+                            <div [style]="'padding:2%;'">
+                                <h2>Hedy Fry</h2>
+                                <h4>hedy.fry@parl.gc.ca</h4>
+                                <h4>Vancouver Centre District</h4>
+                            </div>
+                        </div>
+                        <div class="yourMemberItemAction">
+                            <button class="yourMemberBtn" matStepperNext>
+                                <span class="material-symbols-outlined">mail</span>
+                                <b>Email</b>
+                            </button>
+                            <p [style]="'text-align: right;'">
+                                If your email app doesn't pop up, click this to copy email addresses and template
+                                manually.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step label="Forward" [style]="'color:var(--main);'">
+                <form [formGroup]="secondFormGroup">
+                    <div>
+                        <h1><b>
+                                Please copy the following email addresses and body.
+                            </b>
+                        </h1>
+                        <div>
+                            <div [style]="'display:flex;justify-content: center;'">
+                                <a>Tips:</a>
+                            </div>
+                            <li>
+                                Please add your name at the end of the email
+                            </li>
+                            <li>
+                                Include your address in email signature for Congress offices to verify constituent
+                                status
+                            </li>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="forwardTitle">
+                                <h1>Email Addresses</h1>
+                                <span class="material-symbols-outlined">
+                                    content_copy
+                                </span>
+                            </div>
+                            <textarea placeholder="hedy.fry@parl.gc.ca, " class="forwardTextArea" rows="3"></textarea>
+                        </div>
+                        <div>
+                            <div class="forwardTitle">
+                                <h1>Email Subjecet</h1>
+                                <span class="material-symbols-outlined">
+                                    content_copy
+                                </span>
+                            </div>
+                            <textarea placeholder="hedy.fry@parl.gc.ca, " class="forwardTextArea" rows="3"></textarea>
+                        </div>
+                        <div>
+                            <div class="forwardTitle">
+                                <h1>Email Body</h1>
+                                <span class="material-symbols-outlined">
+                                    content_copy
+                                </span>
+                            </div>
+                            <textarea placeholder="hedy.fry@parl.gc.ca, " class="forwardTextArea" cols="10"
+                                rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper.reset()">Reset</button>
+                    </div>
+                </form>
+            </mat-step>
+        </mat-stepper>
+    </div>
 
 
-<!-- 
+    <!-- 
     <diV class="homepageContainerText1">
         <div>
             <b class="homeTextHighLight">一人一信</b>

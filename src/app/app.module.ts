@@ -23,6 +23,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
+
+import { PageControlComponent } from './slides/page-control/page-control.component';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,8 @@ import {MatButtonModule} from '@angular/material/button';
     EventListComponent,
     ItemCardComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    PageControlComponent
   ],
   imports: [
     BrowserModule,
@@ -44,11 +48,11 @@ import {MatButtonModule} from '@angular/material/button';
     }),
     BrowserAnimationsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-
     // provideFirebaseApp(() => initializeApp({"projectId":"camera-af868","appId":"1:129701599624:web:d0fc2aec4d2fcde87f823d","databaseURL":"https://camera-af868-default-rtdb.firebaseio.com","storageBucket":"camera-af868.appspot.com","locationId":"us-central","apiKey":"AIzaSyAn4xbkq-uPWA7PZzbfJO1FJv1AWvrmYLY","authDomain":"camera-af868.firebaseapp.com","messagingSenderId":"129701599624","measurementId":"G-6YTEXV96YH"})),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideDatabase(() => getDatabase()),
+    provideStorage(() => getStorage()),
     MatButtonModule,
     MatStepperModule,
     FormsModule,
